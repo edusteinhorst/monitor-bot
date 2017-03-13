@@ -1,5 +1,5 @@
 const TeleBot = require('telebot');
-const bot = new TeleBot('');
+const bot = new TeleBot(''); // Add your Telegram bot key here
 const checker = require('./service_monitor.js');
 const fs = require("fs");
 var util = require('util');
