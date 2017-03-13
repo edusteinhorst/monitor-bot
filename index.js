@@ -1,5 +1,5 @@
 const TeleBot = require('telebot');
-const bot = new TeleBot('346689872:AAFmcdcZopRoUI06IQcNhL8HQWKlC8poQBE');
+const bot = new TeleBot('');
 const checker = require('./service_monitor.js');
 const fs = require("fs");
 var util = require('util');
@@ -60,7 +60,7 @@ bot.on('/remove', msg => {
 	let fromId = msg.from.id;
 	let firstName = msg.from.first_name;
 
-	let [cmdName, service] = msg.text.split(' ');
+	let service = msg.text.replace('/remove ', '');
 
 	util.log(`Recebido /remove de ${ firstName } para serviço ${ service }`);
 
